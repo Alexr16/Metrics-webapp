@@ -1,0 +1,214 @@
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 0.7rem 0.5rem;
+  border-bottom: 1px solid black;
+}
+
+.header-container h3 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  font-size: 1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.header-container h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.header-container .ouline-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-container .ouline-left svg {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.header-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.microphone {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background: none;
+}
+
+.settings {
+  margin: 0;
+  padding: 0 0 0 1.5rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background: none;
+}
+
+.microphone svg {
+  width: 1.063rem;
+  height: 1.063rem;
+}
+
+.settings svg {
+  width: 1.063rem;
+  height: 1.063rem;
+}
+
+.firts-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.map-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+.map {
+  max-width: 160px;
+}
+
+.stast {
+  border: 1px solid black;
+  margin: 0;
+  padding: 0.3rem 1rem;
+}
+
+.countries-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.countries {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.country {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid black;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.country h2 {
+  font-size: 1em;
+}
+
+.country-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 1rem;
+  padding-top: 1rem;
+}
+
+.arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: end;
+  padding-right: 0.5rem;
+}
+
+.arrow-right {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background: none;
+}
+
+.arrow-right svg {
+  width: 1.063rem;
+  height: 1.063rem;
+}
+
+.country-name {
+  margin: 0;
+}
+
+.country-p {
+  margin: 0;
+  font-size: 1em;
+}
+
+.country-img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.country-img {
+  width: 130px;
+  height: 100px;
+}
+/*# sourceMappingURL=HomePage.css.map */

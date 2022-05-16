@@ -1,0 +1,158 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0.7rem 0.5rem;
+  border-bottom: 1px solid black;
+
+  h3 {
+    align-items: center;
+    margin: 0;
+    font-size: 1em;
+    align-self: center;
+  }
+
+  h4 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 0.8em;
+    font-weight: 400;
+  }
+
+  .ouline-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .ouline-left svg {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}
+
+.center-title {
+
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.microphone {
+  margin: 0;
+  padding: 0;
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+.settings {
+  margin: 0;
+  padding: 0 0 0 1.5rem;
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+.microphone svg {
+  width: 1.063rem;
+  height: 1.063rem;
+}
+  
+.settings svg {
+  width: 1.063rem;
+  height: 1.063rem;
+}
+
+.firts-card {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.map {
+  max-width: 160px;
+}
+
+.stast {
+  border: 1px solid black;
+  margin: 0;
+  padding: 0.3rem 1rem;
+}
+
+.countries-container {
+  display: flex;
+  justify-content: center;
+}
+
+.countries {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.country {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 1rem 0;
+
+  h2 {
+    font-size: 1em;
+  }
+}
+
+.country-data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 1rem;
+  padding-top: 1rem;
+}
+
+.arrow {
+  display: flex;
+  align-self: end;
+  padding-right: 0.5rem;
+}
+
+.arrow-right {
+  margin: 0;
+  padding: 0;
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+.arrow-right svg {
+  width: 1.063rem;
+  height: 1.063rem;  
+}
+
+.country-name {
+  margin: 0;
+}
+
+.country-p {
+  margin: 0;
+  font-size: 1em;
+}
+
+.country-img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.country-img {
+  width: 130px;
+  height: 100px;
+}
