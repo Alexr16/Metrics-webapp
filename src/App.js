@@ -18,6 +18,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/Country/:name" element={<CountriesPage />} />
+        <Route path="*" element={(<main><p>Not exit!</p></main>)} />
       </Routes>
     </BrowserRouter>
   );
