@@ -8,7 +8,7 @@ const Country = (prop) => {
   const image = getMapUrl(`${country.id}`);
 
   return (
-    <>
+    <li>
       <Link
         to={`/Country/${country.id}`}
       >
@@ -27,7 +27,7 @@ const Country = (prop) => {
           </div>
         </div>
       </Link>
-    </>
+    </li>
   );
 };
 
