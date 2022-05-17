@@ -1,16 +1,26 @@
 import './App.scss';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
 import HomePage from './pages/HomePage';
+import { fetchCountriesData } from './Redux/Countries/Countries';
+import CountriesPage from './pages/CountriesPage';
 
-const App = () => (
-  <div className="App">
-    <Router>
+const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchCountriesData());
+  }, []);
+
+  return (
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/Countries/:countryName" element={<CountriesPage />} /> */}
+        <Route path="/Country/:name" element={<CountriesPage />} />
       </Routes>
-    </Router>
-  </div>
-);
+    </BrowserRouter>
+  );
+};
 
 export default App;
