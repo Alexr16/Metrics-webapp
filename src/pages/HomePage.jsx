@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
 import { GrMicrophone } from 'react-icons/gr';
 import { FiSettings } from 'react-icons/fi';
 import { AiOutlineLeft } from 'react-icons/ai';
@@ -11,9 +11,9 @@ import CountriesList from '../components/CountriesList';
 const HomePage = () => {
   const dispatch = useDispatch();
   const { status, data } = useSelector((state) => state.Countries);
-  console.log(data);
+
   useEffect(() => {
-    // if (data.length <= 0) {
+    // if (status === 'Not Fetched') {
     dispatch(fetchCountriesData());
     // }
   }, []);
@@ -41,7 +41,7 @@ const HomePage = () => {
           </div>
           <div>
             <h1>Daily Statistics</h1>
-            <h2>{data[32].name}</h2>
+            <h2>{data[32].name.toUpperCase()}</h2>
             <p>
               {`${data[32].confirm} new infections`}
             </p>
