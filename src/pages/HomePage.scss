@@ -177,18 +177,12 @@ ul {
 
 li {
   list-style: none;
-}
-
-li:nth-child(3n-2) {
-  background-color: $blue-1;
-}
-
-li:nth-child(3n-1) {
   background-color: $sky-blue;
 }
 
-li:nth-child(3n) {
-  background-color: $blue-2;
+li:nth-child(4n+2),
+li:nth-child(4n+3) {
+  background-color: $blue-1;
 }
 
 .country-data {
