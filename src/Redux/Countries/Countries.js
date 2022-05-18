@@ -1,8 +1,9 @@
 const FETCH_COUNTRIES_DATA = 'MetricsWebApp/Countries/FETCH_COUNTRIES_DATA';
 const initialState = { status: 'Not Fetched', data: [] };
-
-const date = '2022-05-16';
-// (new Date()).toISOString().split('T')[0];
+const newDate = new Date();
+const yesterday = new Date();
+yesterday.setDate(newDate.getDate() - 1);
+const date = yesterday.toISOString().split('T')[0];
 
 export const success = (countries) => ({
   type: FETCH_COUNTRIES_DATA,
@@ -13,7 +14,7 @@ export const fetchCountriesData = () => async (dispatch) => {
   fetch(`https://api.covid19tracking.narrativa.com/api/${date}`)
     .then((data) => data.json())
     .then((data) => {
-      let countriesData = [];
+      const countriesData = [];
       const countriesObject = data.dates[date].countries;
       Object.keys(countriesObject).forEach((country) => {
         countriesData.push({
@@ -43,7 +44,6 @@ export const fetchCountriesData = () => async (dispatch) => {
         });
       });
 
-      countriesData = countriesData.filter((country) => country.confirm > 0);
       dispatch(success(countriesData));
     })
     .catch((error) => { throw error; });

@@ -1,9 +1,12 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import {
+  fireEvent, render, screen, waitFor,
+} from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import * as reactRedux from 'react-redux';
 import '@testing-library/jest-dom';
 import HomePage from '../pages/HomePage';
 import countryData from '../__mocks__/country';
+import CountriesList from '../components/CountriesList';
 
 jest.mock('react-redux', () => ({
   useSelector: jest.fn(),
@@ -29,10 +32,6 @@ describe('Render header', () => {
         <HomePage />
       </BrowserRouter>,
     );
-    // const title = screen.getByTestId('title');
-    // await waitFor(() => {
-    //   expect(title).toBeInTheDocument();
-    // });
     const title = screen.getByText('Most Views');
     await waitFor(() => {
       expect(title).toBeInTheDocument();
@@ -47,5 +46,50 @@ describe('Render header', () => {
     );
     const settingsIcon = screen.queryByTitle(/settings/i);
     expect(settingsIcon).toBeInTheDocument();
+  });
+});
+
+describe('App interactions test', () => {
+  const useSelectorMock = reactRedux.useSelector;
+  const useDispatchMock = reactRedux.useDispatch;
+
+  beforeEach(() => {
+    useDispatchMock.mockImplementation(() => () => { });
+    useSelectorMock.mockImplementation((state) => state(countryData));
+  });
+  afterEach(() => {
+    useSelectorMock.mockClear();
+  });
+
+  test('Display countries', async () => {
+    const countriesData = useSelectorMock(
+      (mockStore) => mockStore.Countries,
+    );
+    render(
+      <BrowserRouter>
+        <CountriesList countries={countriesData} />
+        ,
+      </BrowserRouter>,
+    );
+    const country = await screen.getByRole('link', { name: /france/i });
+    await waitFor(() => {
+      expect(country).toBeInTheDocument();
+    });
+  });
+
+  test('Assert detail page by clicking on a card', async () => {
+    const countriesData = useSelectorMock(
+      (mockStore) => mockStore.Countries,
+    );
+    render(
+      <BrowserRouter>
+        <CountriesList countries={countriesData} />
+        ,
+      </BrowserRouter>,
+    );
+    const country = await screen.getByRole('link', { name: /france/i });
+    fireEvent.click(country);
+    const confirmed = await waitFor(() => screen.getByText(/france/i));
+    expect(confirmed).toBeInTheDocument();
   });
 });
