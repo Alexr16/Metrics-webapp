@@ -60,9 +60,13 @@ const HomePage = () => {
         <div className="stast">
           STATS BY COUNTRY
         </div>
-        <div className="countries-container">
+        <div>
           { search === ''
-            ? (<CountriesList countries={data} />) : (<CountriesList countries={search} />)}
+            ? (
+              <div className="countries-container">
+                <CountriesList countries={data} />
+              </div>
+            ) : (<CountriesList countries={search} />)}
         </div>
       </>
       )}
