@@ -17,11 +17,10 @@
 - JavaScript
 - HTML
 
-<!-- ## Live Demo
+## Live Demo
 
 For a live demo
-- Heroku [click here](https://math-magicians-jorge.herokuapp.com/quote).
-- Netlify [click here](https://netlify-thinks-alexr16-is-great.netlify.app). -->
+- Netlify [click here](https://alexr16-makes-great-sites.netlify.app/).
 
 ## Getting Started
 
