@@ -21,7 +21,7 @@
 ## Live Demo
 
 For a live demo
-- Netlify [click here](https://alexr16-makes-great-sites.netlify.app/).
+- Netlify [click here](https://deploy-preview-1--super-cool-site-by-alexr16.netlify.app).
 
 ## Getting Started
 
