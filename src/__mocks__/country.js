@@ -1,14 +1,29 @@
 const countryData = {
   Countries: [
     {
-      id: 'lkjhg',
-      name: '12s34',
+      id: 'france',
+      name: 'France',
       confirm: 22,
-    },
-    {
-      id: 'sfsdvfdv',
-      name: '12s3efarf4',
-      confirm: 23,
+      data: [
+        {
+          source: 'source',
+          today_confirmed: 2,
+          today_deaths: 1,
+          today_new_deaths: 1,
+          today_new_open_cases: 1,
+          today_new_recovered: 1,
+          today_open_cases: 1,
+          today_recovered: 1,
+          today_vs_yesterday_confirmed: 1,
+          today_vs_yesterday_deaths: 1,
+          today_vs_yesterday_open_cases: 1,
+          today_vs_yesterday_recovered: 1,
+          yesterday_confirmed: 1,
+          yesterday_deaths: 1,
+          yesterday_open_cases: 1,
+          yesterday_recovered: 1,
+        },
+      ],
     },
   ],
 };
