@@ -168,6 +168,10 @@ ul {
   }
 }
 
+li {
+  list-style: none;
+}
+
 li:nth-child(3n-2) {
   background-color: $blue-1;
 }
