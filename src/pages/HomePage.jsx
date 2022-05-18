@@ -52,10 +52,8 @@ const HomePage = () => {
           </div>
           <div>
             <h1>DAILY STATISTICS</h1>
-            <h2>{data[32].name.toUpperCase()}</h2>
-            <p>
-              {`${data[32].confirm} new infections`}
-            </p>
+            <h2>COVID-19 </h2>
+            <p>Confirm Cases</p>
             <input className="input" type="text" name="search" onChange={filterData} placeholder="Country Name" />
           </div>
         </div>
