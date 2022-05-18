@@ -31,6 +31,7 @@ exports[`Check if HomePage page renders correctly 1`] = `
   </div>
   <h4
     className="center-title"
+    data-testid="title"
   >
     Most Views
   </h4>
@@ -64,6 +65,7 @@ exports[`Check if HomePage page renders correctly 1`] = `
     <button
       className="settings"
       label="Settings"
+      title="settings"
       type="button"
     >
       <svg

@@ -1,5 +1,5 @@
 import './App.scss';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
 import HomePage from './pages/HomePage';
@@ -14,13 +14,11 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/Country/:name" element={<CountriesPage />} />
-        <Route path="*" element={(<main><p>Not exit!</p></main>)} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/Country/:name" element={<CountriesPage />} />
+      <Route path="*" element={(<main><p>Not exit!</p></main>)} />
+    </Routes>
   );
 };
 
