@@ -14,7 +14,9 @@ const HomePage = () => {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    dispatch(fetchCountriesData());
+    if (status === 'Not Fetched') {
+      dispatch(fetchCountriesData());
+    }
   }, []);
 
   const filterData = (e) => {
@@ -36,10 +38,10 @@ const HomePage = () => {
           <AiOutlineLeft />
           <h3>2022</h3>
         </div>
-        <h4 className="center-title">Most Views</h4>
+        <h4 className="center-title" data-testid="title">Most Views</h4>
         <div className="header-buttons">
           <button type="button" className="microphone" label="microphone"><IoMdMic /></button>
-          <button type="button" className="settings" label="Settings"><FiSettings /></button>
+          <button type="button" className="settings" label="Settings" title="settings"><FiSettings /></button>
         </div>
       </div>
       { status === 'success' && (
