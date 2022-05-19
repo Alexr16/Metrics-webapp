@@ -227,25 +227,25 @@ li:nth-child(4n+3) {
 }
 
 @media screen and (min-width: 769px) {
-
   .firts-card {
     height: 300px;
     align-items: center;
+
     h1 {
       font-size: 2em;
     }
-  
+
     h2 {
       font-size: 1.5em;
     }
-  
+
     p {
       font-size: 1.3em;
     }
   }
-  
+
   .input {
-    width: -webkit-fill-available;
+    width: 100%;
   }
 
   .map {
