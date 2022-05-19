@@ -1,27 +1,29 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import React, { useEffect, useState } from 'react';
 import { IoMdMic } from 'react-icons/io';
 import { FiSettings } from 'react-icons/fi';
 import { AiOutlineLeft } from 'react-icons/ai';
-import { fetchCountriesData } from '../Redux/Countries/Countries';
+// import { fetchCountriesData } from '../Redux/Countries/Countries';
 import './HomePage.scss';
 import { getMapUrl } from '../Utilities/Map';
 import CountriesList from '../components/CountriesList';
 
 const HomePage = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const { status, data } = useSelector((state) => state.Countries);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState(data);
 
   useEffect(() => {
-    if (status === 'Not Fetched') {
-      dispatch(fetchCountriesData());
-    }
-  }, []);
+    // if (status === 'Not Fetched') {
+    //   dispatch(fetchCountriesData());
+    // }
+    setSearch(data);
+  }, [data]);
 
   const filterData = (e) => {
     const string = e.target.value.toLowerCase();
-    const info = data.filter(((country) => (country.id === string)));
+    const info = data.filter((country) => country.id.includes(string));
+    //   (country.id === string)));
     if (info !== 0) {
       setSearch(info);
     } else {
