@@ -7,8 +7,7 @@
 
 ## Screenshot
 
-<img src="./App3.png">
-<img src="./App1.png">
+<img src="./CovidApp1.png">
 
 ## Built With
 
@@ -32,7 +31,7 @@ To get a local copy of the project, follow these steps:
  git clone https://github.com/Alexr16/Metrics-webapp
  ```
  ```
- cd MathMagicians
+ cd Metrics-webapp
  ```
  
 ## Run project

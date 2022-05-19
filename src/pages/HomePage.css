@@ -1,3 +1,26 @@
+.return svg {
+  width: 1rem;
+  height: 1rem;
+  color: white;
+}
+
+.microphone svg {
+  width: 1.063rem;
+  height: 1.063rem;
+  color: white;
+}
+
+.settings svg {
+  width: 1.063rem;
+  height: 1.063rem;
+  color: white;
+}
+
+.arrow-right svg {
+  width: 1.063rem;
+  height: 1.063rem;
+}
+
 .header-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -62,12 +85,6 @@
   cursor: pointer;
 }
 
-.return svg {
-  width: 1rem;
-  height: 1rem;
-  color: white;
-}
-
 .header-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,18 +112,6 @@
           appearance: none;
   border: none;
   background: none;
-}
-
-.microphone svg {
-  width: 1.063rem;
-  height: 1.063rem;
-  color: white;
-}
-
-.settings svg {
-  width: 1.063rem;
-  height: 1.063rem;
-  color: white;
 }
 
 .firts-card {
@@ -151,6 +156,8 @@
 
 .country-img {
   opacity: 0.5;
+  width: 130px;
+  height: 100px;
 }
 
 .input {
@@ -163,15 +170,6 @@
   padding: 0.3rem 1rem;
   background-color: #35548c;
   color: white;
-}
-
-.countries-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 a {
@@ -214,16 +212,14 @@ ul {
   font-size: 1em;
 }
 
-li:nth-child(3n-2) {
-  background-color: #4268af;
-}
-
-li:nth-child(3n-1) {
+li {
+  list-style: none;
   background-color: #5786e4;
 }
 
-li:nth-child(3n) {
-  background-color: #35548c;
+li:nth-child(4n+2),
+li:nth-child(4n+3) {
+  background-color: #4268af;
 }
 
 .country-data {
@@ -260,11 +256,6 @@ li:nth-child(3n) {
   background: none;
 }
 
-.arrow-right svg {
-  width: 1.063rem;
-  height: 1.063rem;
-}
-
 .country-name {
   margin: 0;
 }
@@ -283,8 +274,48 @@ li:nth-child(3n) {
           justify-content: center;
 }
 
-.country-img {
-  width: 130px;
-  height: 100px;
+@media screen and (min-width: 769px) {
+  .firts-card {
+    height: 300px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .firts-card h1 {
+    font-size: 2em;
+  }
+  .firts-card h2 {
+    font-size: 1.5em;
+  }
+  .firts-card p {
+    font-size: 1.3em;
+  }
+  .input {
+    width: -webkit-fill-available;
+  }
+  .map {
+    max-width: 350px;
+    max-height: 270px;
+  }
+  .countries {
+    -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  li:nth-child(4n+2),
+  li:nth-child(4n+3) {
+    background-color: #5786e4;
+  }
+  li:nth-child(6n+2),
+  li:nth-child(6n+4),
+  li:nth-child(6n+6) {
+    background-color: #4268af;
+  }
+  .country-img {
+    width: 200px;
+    height: 150px;
+  }
+  .map-container {
+    margin-right: 7vw;
+  }
 }
 /*# sourceMappingURL=HomePage.css.map */

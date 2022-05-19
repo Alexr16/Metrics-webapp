@@ -1,31 +1,27 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import React, { useEffect, useState } from 'react';
 import { IoMdMic } from 'react-icons/io';
 import { FiSettings } from 'react-icons/fi';
-import { AiOutlineLeft } from 'react-icons/ai';
-import { fetchCountriesData } from '../Redux/Countries/Countries';
 import './HomePage.scss';
 import { getMapUrl } from '../Utilities/Map';
 import CountriesList from '../components/CountriesList';
 
 const HomePage = () => {
-  const dispatch = useDispatch();
   const { status, data } = useSelector((state) => state.Countries);
-  const [search, setSearch] = useState('');
+  const visibleData = data.filter((country) => country.confirm > 0);
+  const [search, setSearch] = useState(visibleData);
 
   useEffect(() => {
-    if (status === 'Not Fetched') {
-      dispatch(fetchCountriesData());
-    }
-  }, []);
+    setSearch(visibleData);
+  }, [data]);
 
   const filterData = (e) => {
     const string = e.target.value.toLowerCase();
-    const info = data.filter(((country) => (country.id === string)));
+    const info = data.filter((country) => country.id.includes(string));
     if (info !== 0) {
       setSearch(info);
     } else {
-      setSearch(data);
+      setSearch(visibleData);
     }
   };
 
@@ -35,7 +31,6 @@ const HomePage = () => {
     <>
       <div className="header-container">
         <div className="ouline-left">
-          <AiOutlineLeft />
           <h3>2022</h3>
         </div>
         <h4 className="center-title" data-testid="title">Most Views</h4>
@@ -64,7 +59,7 @@ const HomePage = () => {
           { search === ''
             ? (
               <div className="countries-container">
-                <CountriesList countries={data} />
+                <CountriesList countries={visibleData} />
               </div>
             ) : (<CountriesList countries={search} />)}
         </div>
