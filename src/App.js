@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import HomePage from './pages/HomePage';
 import { fetchCountriesData } from './Redux/Countries/Countries';
 import CountriesPage from './pages/CountriesPage';
+import ErrorPage from './pages/ErrorPage';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/Country/:name" element={<CountriesPage />} />
-      <Route path="*" element={(<main><p>Not exit!</p></main>)} />
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 };
