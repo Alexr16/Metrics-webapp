@@ -2,7 +2,6 @@ import { useSelector } from 'react-redux';
 import React, { useEffect, useState } from 'react';
 import { IoMdMic } from 'react-icons/io';
 import { FiSettings } from 'react-icons/fi';
-import { AiOutlineLeft } from 'react-icons/ai';
 import './HomePage.scss';
 import { getMapUrl } from '../Utilities/Map';
 import CountriesList from '../components/CountriesList';
@@ -32,7 +31,6 @@ const HomePage = () => {
     <>
       <div className="header-container">
         <div className="ouline-left">
-          <AiOutlineLeft />
           <h3>2022</h3>
         </div>
         <h4 className="center-title" data-testid="title">Most Views</h4>
