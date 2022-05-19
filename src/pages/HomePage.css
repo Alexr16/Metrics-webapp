@@ -273,4 +273,31 @@ li:nth-child(4n+3) {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+@media screen and (min-width: 769px) {
+  .countries {
+    -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  li:nth-child(4n+2),
+  li:nth-child(4n+3) {
+    background-color: #5786e4;
+  }
+  li:nth-child(6n+2),
+  li:nth-child(6n+4),
+  li:nth-child(6n+6) {
+    background-color: #4268af;
+  }
+  .country-img {
+    width: 200px;
+    height: 150px;
+  }
+  .map {
+    max-width: 200px;
+    max-height: 150px;
+  }
+  .map-container {
+    margin-right: 7vw;
+  }
+}
 /*# sourceMappingURL=HomePage.css.map */
