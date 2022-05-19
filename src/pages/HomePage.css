@@ -275,6 +275,28 @@ li:nth-child(4n+3) {
 }
 
 @media screen and (min-width: 769px) {
+  .firts-card {
+    height: 300px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .firts-card h1 {
+    font-size: 2em;
+  }
+  .firts-card h2 {
+    font-size: 1.5em;
+  }
+  .firts-card p {
+    font-size: 1.3em;
+  }
+  .input {
+    width: -webkit-fill-available;
+  }
+  .map {
+    max-width: 350px;
+    max-height: 270px;
+  }
   .countries {
     -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -291,10 +313,6 @@ li:nth-child(4n+3) {
   .country-img {
     width: 200px;
     height: 150px;
-  }
-  .map {
-    max-width: 200px;
-    max-height: 150px;
   }
   .map-container {
     margin-right: 7vw;
