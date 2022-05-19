@@ -7,8 +7,7 @@
 
 ## Screenshot
 
-<img src="./App3.png">
-<img src="./App1.png">
+<img src="./CovidApp.png">
 
 ## Built With
 
