@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import HomePage from './pages/HomePage';
 import { fetchCountriesData } from './Redux/Countries/Countries';
@@ -7,10 +7,13 @@ import CountriesPage from './pages/CountriesPage';
 
 const App = () => {
   const dispatch = useDispatch();
+  const { status } = useSelector((state) => state.Countries);
 
   useEffect(() => {
-    dispatch(fetchCountriesData());
-  }, []);
+    if (status === 'Not Fetched') {
+      dispatch(fetchCountriesData());
+    }
+  });
 
   return (
     <Routes>
