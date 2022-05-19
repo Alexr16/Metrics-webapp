@@ -14,7 +14,7 @@ const CountriesPage = () => {
 
   return (
     <>
-      <Header />
+      <Header message="Country Stats" />
       <div className="country-page">
         <div className="firts-card">
           <div className="map-container">
