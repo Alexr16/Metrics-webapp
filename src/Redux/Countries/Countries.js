@@ -1,9 +1,11 @@
+/* eslint-disable indent */
+/* eslint-disable max-len */
 const FETCH_COUNTRIES_DATA = 'MetricsWebApp/Countries/FETCH_COUNTRIES_DATA';
 const initialState = { status: 'Not Fetched', data: [] };
-const newDate = new Date();
-const yesterday = new Date();
-yesterday.setDate(newDate.getDate() - 1);
-const date = yesterday.toISOString().split('T')[0];
+// const newDate = new Date();
+// const yesterday = new Date();
+// yesterday.setDate(newDate.getDate() - 1);
+// const date = yesterday.toISOString().split('T')[0];
 
 export const success = (countries) => ({
   type: FETCH_COUNTRIES_DATA,
@@ -11,34 +13,27 @@ export const success = (countries) => ({
 });
 
 export const fetchCountriesData = () => async (dispatch) => {
-  fetch(`https://api.covid19tracking.narrativa.com/api/${date}`)
+  fetch('https://covid-api.mmediagroup.fr/v1/cases')
     .then((data) => data.json())
     .then((data) => {
       const countriesData = [];
-      const countriesObject = data.dates[date].countries;
+      const countriesObject = data;
       Object.keys(countriesObject).forEach((country) => {
         countriesData.push({
-          id: countriesObject[country].id,
-          name: countriesObject[country].name,
-          confirm: countriesObject[country].today_new_confirmed,
+          id: countriesObject[country].All.country,
+          name: countriesObject[country].All.country,
+          confirm: countriesObject[country].All.confirmed,
           data: [
             {
-              source: countriesObject[country].source,
-              today_confirmed: countriesObject[country].today_confirmed,
-              today_deaths: countriesObject[country].today_deaths,
-              today_new_deaths: countriesObject[country].today_new_deaths,
-              today_new_open_cases: countriesObject[country].today_new_open_cases,
-              today_new_recovered: countriesObject[country].today_new_recovered,
-              today_open_cases: countriesObject[country].today_open_cases,
-              today_recovered: countriesObject[country].today_recovered,
-              today_vs_yesterday_confirmed: countriesObject[country].today_vs_yesterday_confirmed,
-              today_vs_yesterday_deaths: countriesObject[country].today_vs_yesterday_deaths,
-              today_vs_yesterday_open_cases: countriesObject[country].today_vs_yesterday_open_cases,
-              today_vs_yesterday_recovered: countriesObject[country].today_vs_yesterday_recovered,
-              yesterday_confirmed: countriesObject[country].yesterday_confirmed,
-              yesterday_deaths: countriesObject[country].yesterday_deaths,
-              yesterday_open_cases: countriesObject[country].yesterday_open_cases,
-              yesterday_recovered: countriesObject[country].yesterday_recovered,
+              location: countriesObject[country].All.location,
+              confirmed: countriesObject[country].All.confirmed,
+              deaths: countriesObject[country].All.deaths,
+              recovered: countriesObject[country].All.recovered,
+              population: countriesObject[country].All.population,
+              life_expectancy: countriesObject[country].All.life_expectancy,
+              continent: countriesObject[country].All.continent,
+              capital_city: countriesObject[country].All.capital_city,
+              updated: countriesObject[country].All.updated,
             },
           ],
         });

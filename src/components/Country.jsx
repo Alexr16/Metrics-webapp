@@ -5,7 +5,7 @@ import { getMapUrl } from '../Utilities/Map';
 
 const Country = (prop) => {
   const { country } = prop;
-  const image = getMapUrl(`${country.id}`);
+  const image = getMapUrl(`${country.id.toLowerCase()}`);
 
   return (
     <li>
