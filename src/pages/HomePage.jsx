@@ -8,7 +8,7 @@ import CountriesList from '../components/CountriesList';
 
 const HomePage = () => {
   const { status, data } = useSelector((state) => state.Countries);
-  const visibleData = data.filter((country) => country.confirm > 0);
+  const visibleData = data.filter((country) => country.id !== undefined);
   const [search, setSearch] = useState(visibleData);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const HomePage = () => {
 
   const filterData = (e) => {
     const string = e.target.value.toLowerCase();
-    const info = data.filter((country) => country.id.includes(string));
+    const info = visibleData.filter((country) => country.id.toLowerCase().includes(string));
     if (info !== 0) {
       setSearch(info);
     } else {

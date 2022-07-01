@@ -6,114 +6,65 @@ function RegionItem(prop) {
   return (
     <div className="stats-container">
       <div className="odd">
-        <h3>Source</h3>
+        <h3>Location</h3>
         <div className="views">
-          <p>{country[0].source}</p>
+          <p>{country[0].location}</p>
           <button type="button" className="arrow-right" label="Arrow rigth"><BsArrowRightCircle /></button>
         </div>
       </div>
       <div className="even">
-        <h3>Today Confirmed</h3>
+        <h3>Confirmed</h3>
         <div className="views">
-          <p>{country[0].today_confirmed}</p>
+          <p>{country[0].confirmed}</p>
           <button type="button" className="arrow-right" label="Arrow rigth"><BsArrowRightCircle /></button>
         </div>
       </div>
       <div className="odd">
-        <h3>Today deaths</h3>
+        <h3>Deaths</h3>
         <div className="views">
-          <p>{country[0].today_deaths}</p>
+          <p>{country[0].deaths}</p>
           <button type="button" className="arrow-right" label="Arrow rigth"><BsArrowRightCircle /></button>
         </div>
       </div>
       <div className="even">
-        <h3>Today new deaths</h3>
+        <h3>Recovered</h3>
         <div className="views">
-          <p>{country[0].today_new_deaths}</p>
+          <p>{country[0].recovered}</p>
           <button type="button" className="arrow-right" label="Arrow rigth"><BsArrowRightCircle /></button>
         </div>
       </div>
       <div className="odd">
-        <h3>Today new open cases</h3>
+        <h3>Population</h3>
         <div className="views">
-          <p>{country[0].today_new_open_cases}</p>
+          <p>{country[0].population}</p>
           <button type="button" className="arrow-right" label="Arrow rigth"><BsArrowRightCircle /></button>
         </div>
       </div>
       <div className="even">
-        <h3>Today new recovered</h3>
+        <h3>Life Expectancy</h3>
         <div className="views">
-          <p>{country[0].today_new_recovered}</p>
+          <p>{country[0].life_expectancy}</p>
           <button type="button" className="arrow-right" label="Arrow rigth"><BsArrowRightCircle /></button>
         </div>
       </div>
       <div className="odd">
-        <h3>Today open cases</h3>
+        <h3>Continent</h3>
         <div className="views">
-          <p>{country[0].today_open_cases}</p>
+          <p>{country[0].continent}</p>
           <button type="button" className="arrow-right" label="Arrow rigth"><BsArrowRightCircle /></button>
         </div>
       </div>
       <div className="even">
-        <h3>Today recovered</h3>
+        <h3>Capital City</h3>
         <div className="views">
-          <p>{country[0].today_recovered}</p>
+          <p>{country[0].capital_city}</p>
           <button type="button" className="arrow-right" label="Arrow rigth"><BsArrowRightCircle /></button>
         </div>
       </div>
       <div className="odd">
-        <h3>Today vs yesterday confirmed</h3>
+        <h3>Updated</h3>
         <div className="views">
-          <p>{country[0].today_vs_yesterday_confirmed}</p>
-          <button type="button" className="arrow-right" label="Arrow rigth"><BsArrowRightCircle /></button>
-        </div>
-      </div>
-      <div className="even">
-        <h3>Today vs yesterday deaths</h3>
-        <div className="views">
-          <p>{country[0].today_vs_yesterday_deaths}</p>
-          <button type="button" className="arrow-right" label="Arrow rigth"><BsArrowRightCircle /></button>
-        </div>
-      </div>
-      <div className="odd">
-        <h3>Today vs yesterday open cases</h3>
-        <div className="views">
-          <p>{country[0].today_vs_yesterday_open_cases}</p>
-          <button type="button" className="arrow-right" label="Arrow rigth"><BsArrowRightCircle /></button>
-        </div>
-      </div>
-      <div className="even">
-        <h3>Today vs yesterday recovered</h3>
-        <div className="views">
-          <p>{country[0].today_vs_yesterday_recovered}</p>
-          <button type="button" className="arrow-right" label="Arrow rigth"><BsArrowRightCircle /></button>
-        </div>
-      </div>
-      <div className="odd">
-        <h3>Yesterday confirmed</h3>
-        <div className="views">
-          <p>{country[0].yesterday_confirmed}</p>
-          <button type="button" className="arrow-right" label="Arrow rigth"><BsArrowRightCircle /></button>
-        </div>
-      </div>
-      <div className="even">
-        <h3>Yesterday deaths</h3>
-        <div className="views">
-          <p>{country[0].yesterday_deaths}</p>
-          <button type="button" className="arrow-right" label="Arrow rigth"><BsArrowRightCircle /></button>
-        </div>
-      </div>
-      <div className="odd">
-        <h3>Yesterday open cases</h3>
-        <div className="views">
-          <p>{country[0].yesterday_open_cases}</p>
-          <button type="button" className="arrow-right" label="Arrow rigth"><BsArrowRightCircle /></button>
-        </div>
-      </div>
-      <div className="even">
-        <h3>Yesterday recovered</h3>
-        <div className="views">
-          <p>{country[0].yesterday_recovered}</p>
+          <p>{country[0].updated}</p>
           <button type="button" className="arrow-right" label="Arrow rigth"><BsArrowRightCircle /></button>
         </div>
       </div>

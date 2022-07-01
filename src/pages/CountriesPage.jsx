@@ -9,7 +9,7 @@ const CountriesPage = () => {
   const { data } = useSelector((state) => state.Countries);
   let { name } = useParams();
   const info = data.filter(((country) => (country.id === name)));
-  const image = getMapUrl(name);
+  const image = getMapUrl(name.toLowerCase());
   name = name.replace(/_/g, ' ');
 
   return (
